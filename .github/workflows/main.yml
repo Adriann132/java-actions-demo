@@ -1,0 +1,22 @@
+name: Mi Primer Inspector
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  verificacion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargando el codigo
+        uses: actions/checkout@v4
+
+      - name: Instalando Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Ejecutar Pruebas
+        run: mvn test
