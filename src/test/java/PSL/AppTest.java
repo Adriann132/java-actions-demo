@@ -8,7 +8,7 @@ public class AppTest {
     @Test
     void testAdd() {
         App app = new App();
-        assertEquals(10, app.add(7, 3), "7 + 3 debería ser 10");
+        assertEquals(10, app.add(7, 3), "7 + 3 debería ser 10")
     }
 
     @Test
